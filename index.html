@@ -1,0 +1,80 @@
+<!-- Сайт розроблено студентом Перепелиця Ксенією, група Фемп 5-3, заочна -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преміум Франшиза - Перепелиця Ксенія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Преміум Франшиза</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'Home')">Головна</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'About')">Про франшизу</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'Calculator')">Розрахунок</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'Contacts')">Контакти</a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'Reviews')">Відгуки</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Головна -->
+        <section id="Home" class="tabcontent">
+            <h2>Ласкаво просимо до преміум франшизи!</h2>
+            <p>Отримайте унікальну можливість відкрити власний бізнес з преміум франшизою та повною підтримкою.</p>
+        </section>
+
+        <!-- Про франшизу -->
+        <section id="About" class="tabcontent">
+            <h2>Про франшизу</h2>
+            <p>Наша преміум франшиза включає повну підтримку, навчання та готову бізнес-модель для вашого успіху.</p>
+        </section>
+
+        <!-- Розрахунок -->
+        <section id="Calculator" class="tabcontent">
+            <h2>Розрахунок стартових витрат</h2>
+            <label>Місто: 
+                <select id="city">
+                    <option value="Kyiv">Київ</option>
+                    <option value="Lviv">Львів</option>
+                    <option value="Odessa">Одеса</option>
+                    <option value="Kharkiv">Харків</option>
+                    <option value="Dnipro">Дніпро</option>
+                    <option value="Other">Інші міста</option>
+                </select>
+            </label>
+            <label>Паушальний внесок: <input type="number" id="franchiseFee" value="100000"></label>
+            <label>Оренда: <input type="number" id="rent" placeholder="грн"></label>
+            <label>Обладнання: <input type="number" id="equipment" placeholder="грн"></label>
+            <label>Маркетинг: <input type="number" id="marketing" placeholder="грн"></label>
+            <label>Інші витрати: <input type="number" id="other" placeholder="грн"></label>
+            <button onclick="calculateTotal()">Розрахувати</button>
+            <div class="result" id="totalResult">Загальна стартова сума: 0 грн</div>
+        </section>
+
+        <!-- Контакти -->
+        <section id="Contacts" class="tabcontent">
+            <h2>Контакти</h2>
+            <p>Телефон: 0509124067</p>
+            <p>Email: <a href="mailto:kseniyaperepelitsa@gmail.com">kseniyaperepelitsa@gmail.com</a></p>
+        </section>
+
+        <!-- Відгуки -->
+        <section id="Reviews" class="tabcontent">
+            <h2>Відгуки</h2>
+            <div class="review">"Неймовірна підтримка та готова бізнес-модель!" – Олександр</div>
+            <div class="review">"Легко розпочати бізнес завдяки преміум франшизі." – Марія</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Розроблено: Перепелиця Ксенія | Група Фемп 5-3, заочна</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
